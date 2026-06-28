@@ -1,0 +1,14 @@
+
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+       Set<Integer>s=new TreeSet<>();
+       int n=nums.length;
+       for(int i=0;i<n;i++){
+        if(s.contains(nums[i])){
+            return true;
+        }
+        s.add(nums[i]);
+       }
+       return false;
+    }
+}
